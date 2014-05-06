@@ -284,6 +284,26 @@ typedef NS_OPTIONS(uint32_t, CNPhysicsCategory)
     _mySquare8.physicsBody.contactTestBitMask = CNPhysicsCategoryAvoid | CNPhysicsCategoryCoin | CNPhysicsCategoryDetach | CNPhysicsCategoryHeart;
     
     
+    //particle effects***
+    _BalloonAir = [NSKeyedUnarchiver unarchiveObjectWithFile:[[NSBundle mainBundle] pathForResource:@"BalloonAir" ofType:@"sks"]];
+    //_BalloonAir.position = CGPointMake(_myCircle.size.width-45, _myCircle.size.height-30);
+    _BalloonAir.position = CGPointMake(_myCircle.position.x-10, _myCircle.position.y+5);
+    _BalloonAir.hidden = YES;
+    [self addChild:_BalloonAir];
+    
+    _BalloonAir2 = [NSKeyedUnarchiver unarchiveObjectWithFile:[[NSBundle mainBundle] pathForResource:@"BalloonAir2" ofType:@"sks"]];
+    
+    //_BalloonAir2.position = CGPointMake(_myCircle.size.width-25, _myCircle.size.height-40);
+    _BalloonAir2.position = CGPointMake(_myCircle.position.x+10, _myCircle.position.y+5);
+    _BalloonAir2.hidden = YES;
+    [self addChild:_BalloonAir2];
+    
+    
+    //_BalloonAir.hidden = testHealth > 30;
+    
+    //end particle fx****
+    
+    
     
 }
 
@@ -593,27 +613,6 @@ typedef NS_OPTIONS(uint32_t, CNPhysicsCategory)
         
         [self spawnSquares];
         
-        //particle effects***
-        _BalloonAir = [NSKeyedUnarchiver unarchiveObjectWithFile:[[NSBundle mainBundle] pathForResource:@"BalloonAir" ofType:@"sks"]];
-        //_BalloonAir.position = CGPointMake(_myCircle.size.width-45, _myCircle.size.height-30);
-        _BalloonAir.position = CGPointMake(_myCircle.position.x-10, _myCircle.position.y+5);
-        _BalloonAir.hidden = YES;
-        [self addChild:_BalloonAir];
-        
-        _BalloonAir2 = [NSKeyedUnarchiver unarchiveObjectWithFile:[[NSBundle mainBundle] pathForResource:@"BalloonAir2" ofType:@"sks"]];
-        
-        //_BalloonAir2.position = CGPointMake(_myCircle.size.width-25, _myCircle.size.height-40);
-        _BalloonAir2.position = CGPointMake(_myCircle.position.x+10, _myCircle.position.y+5);
-        _BalloonAir2.hidden = YES;
-        [self addChild:_BalloonAir2];
-        
-        
-        //_BalloonAir.hidden = testHealth > 30;
-        
-        //end particle fx****
-        
-        
-        
         [self activateJointRope];
         
         //       [self makeShelf];
@@ -842,9 +841,6 @@ typedef NS_OPTIONS(uint32_t, CNPhysicsCategory)
             }
             
             
-            
-            
-            
         }
             
     }
@@ -862,8 +858,8 @@ typedef NS_OPTIONS(uint32_t, CNPhysicsCategory)
     _BalloonAir.hidden = YES;
     _BalloonAir2.hidden = YES;
     
-    [self addChild:_BalloonAir];
-    [self addChild:_BalloonAir2];
+    //[self addChild:_BalloonAir];
+    //[self addChild:_BalloonAir2];
     
     scoreValue = 0;
     
