@@ -595,15 +595,17 @@ typedef NS_OPTIONS(uint32_t, CNPhysicsCategory)
         
         //particle effects***
         _BalloonAir = [NSKeyedUnarchiver unarchiveObjectWithFile:[[NSBundle mainBundle] pathForResource:@"BalloonAir" ofType:@"sks"]];
-        //_BalloonAir.position = CGPointMake(_myCircle.size.width/1.5, _myCircle.size.height/1.5);
+        //_BalloonAir.position = CGPointMake(_myCircle.size.width-45, _myCircle.size.height-30);
+        _BalloonAir.position = CGPointMake(_myCircle.position.x-10, _myCircle.position.y+5);
         _BalloonAir.hidden = YES;
-        [_myCircle addChild:_BalloonAir];
+        [self addChild:_BalloonAir];
         
         _BalloonAir2 = [NSKeyedUnarchiver unarchiveObjectWithFile:[[NSBundle mainBundle] pathForResource:@"BalloonAir2" ofType:@"sks"]];
         
-        //_BalloonAir.position = CGPointMake(_myCircle.size.width/1.5, _myCircle.size.height/1.5);
+        //_BalloonAir2.position = CGPointMake(_myCircle.size.width-25, _myCircle.size.height-40);
+        _BalloonAir2.position = CGPointMake(_myCircle.position.x+10, _myCircle.position.y+5);
         _BalloonAir2.hidden = YES;
-        [_myCircle addChild:_BalloonAir2];
+        [self addChild:_BalloonAir2];
         
         
         //_BalloonAir.hidden = testHealth > 30;
@@ -742,6 +744,9 @@ typedef NS_OPTIONS(uint32_t, CNPhysicsCategory)
     
     [_myDetach.physicsBody setVelocity:CGVectorMake(0, 100)];
     
+    _BalloonAir.position = CGPointMake(_myCircle.position.x-10, _myCircle.position.y+5);
+    _BalloonAir2.position = CGPointMake(_myCircle.position.x+10, _myCircle.position.y+5);
+    
     
     
     switch (_gameState) {
@@ -857,8 +862,8 @@ typedef NS_OPTIONS(uint32_t, CNPhysicsCategory)
     _BalloonAir.hidden = YES;
     _BalloonAir2.hidden = YES;
     
-    [_myCircle addChild:_BalloonAir];
-    [_myCircle addChild:_BalloonAir2];
+    [self addChild:_BalloonAir];
+    [self addChild:_BalloonAir2];
     
     scoreValue = 0;
     
@@ -917,7 +922,7 @@ typedef NS_OPTIONS(uint32_t, CNPhysicsCategory)
                               timePerFrame:0.25]];
             
             _BalloonAir2.hidden = NO;
-            _BalloonAir.hidden = YES;
+            _BalloonAir.hidden = NO;
             NSLog(@"More air appears");
         }
         
