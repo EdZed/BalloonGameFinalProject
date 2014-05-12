@@ -45,6 +45,7 @@
 		F09E891518F3927000022C19 /* bubble.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F09E891118F3927000022C19 /* bubble.mp3 */; };
 		F09E891618F3927000022C19 /* coin.wav in Resources */ = {isa = PBXBuildFile; fileRef = F09E891218F3927000022C19 /* coin.wav */; };
 		F09E891718F3927000022C19 /* coinUp.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F09E891318F3927000022C19 /* coinUp.mp3 */; };
+		F0A1F00E1920495000FCCDBF /* Start.m in Sources */ = {isa = PBXBuildFile; fileRef = F0A1F00D1920495000FCCDBF /* Start.m */; };
 		F0B9E2D7190C7811006B1BB1 /* BalloonAir.sks in Resources */ = {isa = PBXBuildFile; fileRef = F0B9E2D6190C7811006B1BB1 /* BalloonAir.sks */; };
 		F0B9E2D9190C7819006B1BB1 /* BalloonAir2.sks in Resources */ = {isa = PBXBuildFile; fileRef = F0B9E2D8190C7819006B1BB1 /* BalloonAir2.sks */; };
 		F0B9E2DB190C781E006B1BB1 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = F0B9E2DA190C781E006B1BB1 /* spark.png */; };
@@ -110,6 +111,8 @@
 		F09E891118F3927000022C19 /* bubble.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bubble.mp3; sourceTree = "<group>"; };
 		F09E891218F3927000022C19 /* coin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = coin.wav; sourceTree = "<group>"; };
 		F09E891318F3927000022C19 /* coinUp.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = coinUp.mp3; sourceTree = "<group>"; };
+		F0A1F00C1920495000FCCDBF /* Start.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Start.h; sourceTree = "<group>"; };
+		F0A1F00D1920495000FCCDBF /* Start.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Start.m; sourceTree = "<group>"; };
 		F0B9E2D6190C7811006B1BB1 /* BalloonAir.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BalloonAir.sks; sourceTree = "<group>"; };
 		F0B9E2D8190C7819006B1BB1 /* BalloonAir2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BalloonAir2.sks; sourceTree = "<group>"; };
 		F0B9E2DA190C781E006B1BB1 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
@@ -180,6 +183,8 @@
 				D56006D718B2896800D0C342 /* Main.storyboard */,
 				D56006DA18B2896800D0C342 /* ViewController.h */,
 				D56006DB18B2896800D0C342 /* ViewController.m */,
+				F0A1F00C1920495000FCCDBF /* Start.h */,
+				F0A1F00D1920495000FCCDBF /* Start.m */,
 				D56006DD18B2896800D0C342 /* MyScene.h */,
 				D56006DE18B2896800D0C342 /* MyScene.m */,
 				D56006E018B2896800D0C342 /* Spaceship.png */,
@@ -389,6 +394,7 @@
 			files = (
 				D56006DF18B2896800D0C342 /* MyScene.m in Sources */,
 				F08D2E4C18E4D54300BEFE19 /* SKTAudio.m in Sources */,
+				F0A1F00E1920495000FCCDBF /* Start.m in Sources */,
 				D56006DC18B2896800D0C342 /* ViewController.m in Sources */,
 				F08D2E4A18E4D54300BEFE19 /* SKEmitterNode+SKTExtras.m in Sources */,
 				F08D2E4D18E4D54300BEFE19 /* SKTUtils.mm in Sources */,
